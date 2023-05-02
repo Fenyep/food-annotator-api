@@ -9,7 +9,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export const app = express();
 
-app.use(cors())
+app.use(cors({ origin: '*' }))
 
 app.use('/upload', express.static(path.join(__dirname, 'uploads')));
 
